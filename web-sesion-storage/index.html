@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session Storage</title>
+</head>
+<body>
+    <h1>WebStorage</h1>
+    <script>
+         if(sessionStorage.visitas)
+    {
+        sessionStorage.visitas = Number(sessionStorage.visitas) + 1
+    }
+    else{
+        sessionStorage.setItem("visitas", 1)
+    }
+
+    document.write("visitas"," ", sessionStorage.visitas);
+    </script>
+</body>
+</html>
