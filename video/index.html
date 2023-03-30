@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         button {
+    background-color: lightgreen;
+    font-size: 20px;
+    padding: 5px;
+}
+    </style>
+    <title>Mp4 Player</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <video id="video" src="video01.mp4" width="500"
+            height="400"
+            ></video>
+        </div>
+
+        <div class="botao">
+          
+            <button id="reproduzir" onclick="reproduzirVideo()">Reproduzir Video</button>
+            <button id="pausar" onclick="pausarVideo()">Pausar Video</button>
+            <button id="mutar" onclick="mutarVideo()">Mutar Video</button>
+            <button id="avancar" onclick="avancarVideo()">Avançar Video</button>
+            <button id="tela" onclick="telaCheia()">Tela Cheia</button>
+        </div>
+    </div>
+</body>
+<script>
+    
+function reproduzirVideo() {
+    let r = document.getElementById('video');
+    r.play()
+}
+
+function pausarVideo() {
+    let r = document.getElementById('video');
+    r.pause()
+}
+
+function mutarVideo() {
+    let r = document.getElementById('video');
+    r.muted = true;
+}
+
+function avancarVideo() {
+    let r = document.getElementById('video');
+    r.currentTime+=5
+}
+
+function telaCheia() {
+    let r = document.getElementById('video');
+    r.webkitRequestFullScreen();
+}
+
+        
+    
+</script>
+</html>
